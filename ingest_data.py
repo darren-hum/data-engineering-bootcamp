@@ -22,7 +22,7 @@ def main(params):
     df = pd.read_parquet(url)
 
     #assign headers
-    df.head(n=0).to_sql(name={table}, con=engine, if_exists='replace')
+    df.head(n=0).to_sql(name=table, con=engine, if_exists='replace')
 
     #to sql with postgres con
     df.to_sql(  
